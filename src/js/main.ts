@@ -1,4 +1,4 @@
-import { loadImage } from '../utils/loader'
+import { loadImage } from './loaders'
 import tilesImg from '../img/tiles.png'
 import SpriteSheet from './SpriteSheet'
 
