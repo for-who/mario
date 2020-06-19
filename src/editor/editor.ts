@@ -1,10 +1,9 @@
 import { loadImage } from '../js/loaders'
-import tilesImg from '../img/tiles.png'
 
 const canvas = document.getElementById('editor') as HTMLCanvasElement
 const context = canvas.getContext('2d')
 
-loadImage(tilesImg).then((tiles) => {
+loadImage('/img/tiles.png').then((tiles) => {
   context.drawImage(tiles, 16, 16)
   context.textBaseline = 'top'
 

@@ -4,10 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "parcel ./src/index.html",
-    "editor": "parcel ./src/editor/editor.html"
+    "start": "parcel ./src/index.html ./src/editor/editor.html"
   },
   "devDependencies": {
+    "parcel-plugin-static-files-copy": "^2.4.3",
     "typescript": "^3.9.5"
+  },
+  "staticFiles": {
+    "staticPath": "public",
+    "watcherGlob": "**"
   }
 }
