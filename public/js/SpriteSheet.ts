@@ -29,7 +29,7 @@ class SpriteSheet {
 
   draw(name: string, context: CanvasRenderingContext2D, x: number, y: number) {
     const buffer = this.tiles.get(name)
-    context.drawImage(buffer, x, y)
+    context.drawImage(buffer, x * this.width, y * this.height)
   }
 }
 
