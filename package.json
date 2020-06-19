@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "parcel ./src/index.html ./src/editor/editor.html"
+    "start": "parcel ./public/index.html ./public/editor/editor.html"
   },
   "devDependencies": {
     "parcel-plugin-static-files-copy": "^2.4.3",

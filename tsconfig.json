@@ -1,5 +1,5 @@
 {
-  "include": ["src"],
+  "include": ["public"],
   "compilerOptions": {
     "lib": ["ES2015", "dom"]
   }
