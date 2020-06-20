@@ -7,3 +7,7 @@ export function loadImage(url: string): Promise<HTMLImageElement> {
     img.src = url
   })
 }
+
+export function loadLevel(name: string): Promise<any> {
+  return fetch(`/levels/${name}.json`).then((r) => r.json())
+}

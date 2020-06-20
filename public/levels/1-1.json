@@ -1,0 +1,12 @@
+{
+  "backgrounds": [
+    {
+      "tile": "sky",
+      "ranges": [[0, 32, 0, 30]]
+    },
+    {
+      "tile": "ground",
+      "ranges": [[0, 32, 28, 30]]
+    }
+  ]
+}
