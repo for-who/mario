@@ -15,13 +15,18 @@ function drawBackground(background, context, sprites: SpriteSheet) {
   })
 }
 
-loadImage('/img/tiles.png').then((tiles) => {
-  const sprites = new SpriteSheet(tiles, 16, 16)
-  sprites.define('ground', 0, 0)
-  sprites.define('sky', 3, 23)
-
-  loadLevel('1-1').then((level) => {
-    drawBackground(level.backgrounds[0], context, sprites)
-    drawBackground(level.backgrounds[1], context, sprites)
+function loadBackgroundSprites() {
+  return loadImage('/img/tiles.png').then((tiles) => {
+    const sprites = new SpriteSheet(tiles, 16, 16)
+    sprites.define('ground', 0, 0)
+    sprites.define('sky', 3, 23)
+    return sprites
   })
-})
+}
+
+Promise.all([loadBackgroundSprites(), loadLevel('1-1')]).then(
+  ([backgroundSprites, level]) => {
+    drawBackground(level.backgrounds[0], context, backgroundSprites)
+    drawBackground(level.backgrounds[1], context, backgroundSprites)
+  },
+)
