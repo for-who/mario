@@ -10,10 +10,10 @@ export function loadBackgroundSprites() {
   })
 }
 
-export function loadMarioSprites() {
+export function loadMarioSprite() {
   return loadImage('/img/characters.gif').then((mario) => {
-    const sprites = new SpriteSheet(mario, 16, 16)
-    sprites.define('idle', 276, 44, 16, 16)
-    return sprites
+    const sprite = new SpriteSheet(mario, 16, 16)
+    sprite.define('idle', 276, 44, 16, 16)
+    return sprite
   })
 }
