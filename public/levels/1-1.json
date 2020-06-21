@@ -2,11 +2,11 @@
   "backgrounds": [
     {
       "tile": "sky",
-      "ranges": [[0, 32, 0, 30]]
+      "ranges": [[0, 16, 0, 13]]
     },
     {
       "tile": "ground",
-      "ranges": [[0, 32, 28, 30]]
+      "ranges": [[0, 16, 13, 15]]
     }
   ]
 }

@@ -1,3 +1,5 @@
+import { Level } from './types'
+
 export function loadImage(url: string): Promise<HTMLImageElement> {
   return new Promise((resolve) => {
     const img = new Image()
@@ -8,6 +10,6 @@ export function loadImage(url: string): Promise<HTMLImageElement> {
   })
 }
 
-export function loadLevel(name: string): Promise<any> {
+export function loadLevel(name: string): Promise<Level> {
   return fetch(`/levels/${name}.json`).then((r) => r.json())
 }
