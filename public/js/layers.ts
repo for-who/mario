@@ -1,6 +1,7 @@
 import { Background } from './types'
 import SpriteSheet from './SpriteSheet'
 import { Layer } from './Compositor'
+import Entity from './Entity'
 
 function drawBackground(
   background: Background,
@@ -35,8 +36,8 @@ export function createBackgroundLayer(
   }
 }
 
-export function createSpriteLayer(sprite: SpriteSheet, pos): Layer {
+export function createSpriteLayer(sprite: Entity): Layer {
   return (context) => {
-    sprite.draw('idle', context, pos.x, pos.y)
+    sprite.draw(context)
   }
 }
