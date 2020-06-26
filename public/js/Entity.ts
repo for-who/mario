@@ -10,5 +10,5 @@ export default class Entity {
 
   draw(context: CanvasRenderingContext2D) {}
 
-  update() {}
+  update(deltaTime: number) {}
 }
